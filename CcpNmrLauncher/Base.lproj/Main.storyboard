@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="CcpNmrLauncher" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="CcpNmrLauncher" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About CcpNmrLauncher" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide CcpNmrLauncher" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Quit CcpNmrLauncher" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CcpNmrLauncher" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="CcpNmr Launcher" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CcpNmrLauncher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="490" height="290"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VTN-62-vbn">
+                                <rect key="frame" x="420" y="23" width="55" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" continuous="YES" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="CCPN-noback" id="q2k-tz-e6Q"/>
+                            </imageView>
+                            <button wantsLayer="YES" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zT6-j8-VxG">
+                                <rect key="frame" x="11" y="86" width="109" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <color key="color" red="0.1834485233" green="0.43883126970000003" blue="0.35958755019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="square" title="Assign" bezelStyle="shadowlessSquare" image="AnalysisAssign_img" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="5kE-Wp-sC7">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="14" name="OpenSans-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.1834485233" green="0.43883126970000003" blue="0.35958755019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runFromIcon:" target="XfG-lQ-9wD" id="v0X-zR-ndF"/>
+                                </connections>
+                            </button>
+                            <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPN-ua-8aR" userLabel="Others">
+                                <rect key="frame" x="9" y="19" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="More..." bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" preferredEdge="maxX" autoenablesItems="NO" altersStateOfSelectedItem="NO" id="CFe-aN-v40" userLabel="Reveal in Finder">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name="OpenSans-Regular"/>
+                                    <menu key="menu" title="More..." autoenablesItems="NO" id="8on-LS-Xox" userLabel="Show in Finder">
+                                        <items>
+                                            <menuItem title="More..." hidden="YES" id="KVl-rK-ieI">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="ChemBuild" id="Rt9-jp-dkp">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                                <connections>
+                                                    <action selector="runFromSubMenu:" target="XfG-lQ-9wD" id="Jmw-ul-hXW"/>
+                                                </connections>
+                                            </menuItem>
+                                            <menuItem title="Update" state="on" id="V29-YA-TJj">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                                <connections>
+                                                    <action selector="runFromSubMenu:" target="XfG-lQ-9wD" id="jEM-Yi-ofh"/>
+                                                </connections>
+                                            </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="2oT-G2-Wkj"/>
+                                            <menuItem title="Show Executables..." id="jHl-GR-gzw">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                                <connections>
+                                                    <action selector="reavelBin:" target="XfG-lQ-9wD" id="KoN-XU-e28"/>
+                                                </connections>
+                                            </menuItem>
+                                            <menuItem title="Show Tutorials..." id="xui-Ny-DgC">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                                <connections>
+                                                    <action selector="revealTutorial:" target="XfG-lQ-9wD" id="WXn-ZF-Wx2"/>
+                                                </connections>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <color key="contentTintColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            </popUpButton>
+                            <button wantsLayer="YES" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sWA-44-eh4">
+                                <rect key="frame" x="134" y="86" width="105" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <color key="color" red="0.56424111129999999" green="0.45231550929999997" blue="0.00038374649009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="square" title="Screen" bezelStyle="shadowlessSquare" image="AnalysisScreen_img" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="M9h-zo-PZk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="15" name="OpenSans-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.56470588239999997" green="0.45098039220000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runFromIcon:" target="XfG-lQ-9wD" id="DSh-pz-4D7"/>
+                                </connections>
+                            </button>
+                            <button wantsLayer="YES" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-KJ-VWZ">
+                                <rect key="frame" x="371" y="86" width="105" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow">
+                                    <color key="color" red="0.049900211389999997" green="0.31013628840000002" blue="0.5132476091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="square" title="Structure" bezelStyle="shadowlessSquare" image="AnalysisStructure_img" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2tt-Bz-U7r">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="15" name="OpenSans-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.049900211389999997" green="0.31013628840000002" blue="0.5132476091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runFromIcon:" target="XfG-lQ-9wD" id="5d2-xK-5tl"/>
+                                </connections>
+                            </button>
+                            <button wantsLayer="YES" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1rR-J8-AVL">
+                                <rect key="frame" x="254" y="86" width="105" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <color key="color" red="0.4141755104" green="0.233183682" blue="0.44358825680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </shadow>
+                                <buttonCell key="cell" type="square" title="Metabolomics" bezelStyle="shadowlessSquare" image="AnalysisMetabolomics_img" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="LH9-SB-3Ct">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="14" name="OpenSans-Regular"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.4141755104" green="0.233183682" blue="0.44358825680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runFromIcon:" target="XfG-lQ-9wD" id="pXA-7n-VUz"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-1l-3Gr">
+                                <rect key="frame" x="-7" y="222" width="506" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" scrollable="YES" lineBreakMode="clipping" refusesFirstResponder="YES" alignment="left" imageAlignment="right" image="Purple_crop" id="5zU-fg-mKC"/>
+                                <color key="contentTintColor" red="0.4141755104" green="0.233183682" blue="0.44358825680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-kg-g8a">
+                                <rect key="frame" x="71" y="232" width="348" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" alignment="center" title="Collaborative Computational Project for NMR" id="p89-8o-uwN">
+                                    <font key="font" size="15" name="OpenSansRoman-Bold"/>
+                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AnalysisAssign_img" width="764" height="430"/>
+        <image name="AnalysisMetabolomics_img" width="806" height="453"/>
+        <image name="AnalysisScreen_img" width="805" height="453"/>
+        <image name="AnalysisStructure_img" width="631" height="355"/>
+        <image name="CCPN-noback" width="757" height="313"/>
+        <image name="Purple_crop" width="506" height="249"/>
+    </resources>
+</document>
